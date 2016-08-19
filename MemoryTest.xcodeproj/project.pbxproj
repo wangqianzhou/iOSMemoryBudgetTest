@@ -18,7 +18,9 @@
 		55F58DCE164838D4008566AE /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 55F58DCD164838D4008566AE /* Default@2x.png */; };
 		55F58DD0164838D5008566AE /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 55F58DCF164838D5008566AE /* Default-568h@2x.png */; };
 		55F58DD3164838D5008566AE /* MainStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 55F58DD1164838D5008566AE /* MainStoryboard.storyboard */; };
-		55F58DD9164838D5008566AE /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 55F58DD8164838D5008566AE /* ViewController.m */; };
+		55F58DD9164838D5008566AE /* ViewController.mm in Sources */ = {isa = PBXBuildFile; fileRef = 55F58DD8164838D5008566AE /* ViewController.mm */; };
+		93FC7A821D65A11F00B47BC5 /* MemoryLimitMap.m in Sources */ = {isa = PBXBuildFile; fileRef = 93FC7A811D65A11F00B47BC5 /* MemoryLimitMap.m */; };
+		93FC7A851D65A15400B47BC5 /* SystemMemoryObserver.m in Sources */ = {isa = PBXBuildFile; fileRef = 93FC7A841D65A15400B47BC5 /* SystemMemoryObserver.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -38,7 +40,11 @@
 		55F58DCF164838D5008566AE /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
 		55F58DD2164838D5008566AE /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard.storyboard; sourceTree = "<group>"; };
 		55F58DD7164838D5008566AE /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		55F58DD8164838D5008566AE /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		55F58DD8164838D5008566AE /* ViewController.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = ViewController.mm; sourceTree = "<group>"; };
+		93FC7A801D65A11F00B47BC5 /* MemoryLimitMap.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MemoryLimitMap.h; sourceTree = "<group>"; };
+		93FC7A811D65A11F00B47BC5 /* MemoryLimitMap.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MemoryLimitMap.m; sourceTree = "<group>"; };
+		93FC7A831D65A15400B47BC5 /* SystemMemoryObserver.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SystemMemoryObserver.h; sourceTree = "<group>"; };
+		93FC7A841D65A15400B47BC5 /* SystemMemoryObserver.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SystemMemoryObserver.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -85,11 +91,12 @@
 		55F58DBF164838D4008566AE /* MemoryTest */ = {
 			isa = PBXGroup;
 			children = (
+				93FC7A7F1D65A10100B47BC5 /* MemoryObserver */,
 				55F58DC8164838D4008566AE /* AppDelegate.h */,
 				55F58DC9164838D4008566AE /* AppDelegate.m */,
 				55F58DD1164838D5008566AE /* MainStoryboard.storyboard */,
 				55F58DD7164838D5008566AE /* ViewController.h */,
-				55F58DD8164838D5008566AE /* ViewController.m */,
+				55F58DD8164838D5008566AE /* ViewController.mm */,
 				55F58DC0164838D4008566AE /* Supporting Files */,
 			);
 			path = MemoryTest;
@@ -108,6 +115,17 @@
 				55F58DCF164838D5008566AE /* Default-568h@2x.png */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		93FC7A7F1D65A10100B47BC5 /* MemoryObserver */ = {
+			isa = PBXGroup;
+			children = (
+				93FC7A801D65A11F00B47BC5 /* MemoryLimitMap.h */,
+				93FC7A811D65A11F00B47BC5 /* MemoryLimitMap.m */,
+				93FC7A831D65A15400B47BC5 /* SystemMemoryObserver.h */,
+				93FC7A841D65A15400B47BC5 /* SystemMemoryObserver.m */,
+			);
+			path = MemoryObserver;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -178,8 +196,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				55F58DC6164838D4008566AE /* main.m in Sources */,
+				93FC7A821D65A11F00B47BC5 /* MemoryLimitMap.m in Sources */,
+				93FC7A851D65A15400B47BC5 /* SystemMemoryObserver.m in Sources */,
 				55F58DCA164838D4008566AE /* AppDelegate.m in Sources */,
-				55F58DD9164838D5008566AE /* ViewController.m in Sources */,
+				55F58DD9164838D5008566AE /* ViewController.mm in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
